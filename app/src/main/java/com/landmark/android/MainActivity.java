@@ -54,16 +54,22 @@ public class MainActivity extends AppCompatActivity implements IGetProductDetail
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 switch (checkedId){
                     case R.id.inr:
-                        adapter.setCurrencyType(CurrencyType.INR);
-                        adapter.notifyDataSetChanged();
+                        if (adapter != null) {
+                            adapter.setCurrencyType(CurrencyType.INR);
+                            adapter.notifyDataSetChanged();
+                        }
                         break;
                     case R.id.aed:
-                        adapter.setCurrencyType(CurrencyType.AED);
-                        adapter.notifyDataSetChanged();
+                        if (adapter != null) {
+                            adapter.setCurrencyType(CurrencyType.AED);
+                            adapter.notifyDataSetChanged();
+                        }
                         break;
                     case R.id.sar:
-                        adapter.setCurrencyType(CurrencyType.SAR);
-                        adapter.notifyDataSetChanged();
+                        if (adapter != null) {
+                            adapter.setCurrencyType(CurrencyType.SAR);
+                            adapter.notifyDataSetChanged();
+                        }
                         break;
                 }
             }
